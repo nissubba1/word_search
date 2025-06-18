@@ -51,7 +51,7 @@ You can access the detailed documentation for the project [here](https://nissubb
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/word-search.git
+git clone https://github.com/nissubba1/word_search.git
 cd word-search
 ```
 Building the cmake:

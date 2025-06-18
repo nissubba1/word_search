@@ -1,0 +1,382 @@
+\doxysection{word\+Search.\+h File Reference}
+\hypertarget{word_search_8h}{}\label{word_search_8h}\index{wordSearch.h@{wordSearch.h}}
+
+
+This file contains function declarations for Word Search game.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{word_search_8h_a1eea2752d20e6258d1cae9e4bf7da9f0}{load\+File}} (std\+::ifstream \&file\+Obj, std\+::string \&file, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ std\+::string $>$ \&words\+Array)
+\item 
+void \mbox{\hyperlink{word_search_8h_a816a0a663710b33482a8750802a038f2}{display\+Grid}} (char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]})
+\item 
+void \mbox{\hyperlink{word_search_8h_a15ec5f7cd7bfe85c3eb85482e2f7981d}{display\+Word\+Bank}} (const std\+::vector$<$ std\+::string $>$ \&words\+Array)
+\item 
+void \mbox{\hyperlink{word_search_8h_ae75f2a99638259af41fc293652edb5f8}{horizontal\+Search\+Forward}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a36cda9066cb401351daecb899927133e}{horizontal\+Search\+Reverse}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a7e699ea54493bbf3d922b56582b1f215}{vertical\+Search\+Forward}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a4e3dbb8b49ab5a383c9f68a65725a315}{vertical\+Search\+Reverse}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_aaa4754b1d78d7f06bb286df76471fae7}{diagonal\+Search\+Down\+Forward}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a49cbd5e886d8fed5aeb88524ba64d477}{diagonal\+Search\+Down\+Reverse}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a66366660da302866051393f71a0b3bb3}{diagonal\+Search\+Up\+Forward}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a670a34b7502f713ffb45e1b2795a2db8}{diagonal\+Search\+Up\+Reverse}} (int row\+Start, int col\+Start, int row\+End, int col\+End, char grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}}\mbox{]}, std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_ac23eaed35f1d529f1390f279a1c64f5a}{ask\+Coordinates}} (int \&row\+Start, int \&col\+Start, int \&row\+End, int \&col\+End)
+\item 
+void \mbox{\hyperlink{word_search_8h_ac108a8616b5d57535df1033787c1c1f8}{clear\+Word\+Array}} (std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+bool \mbox{\hyperlink{word_search_8h_aaf57a1980a1dca4154e323610c7330a0}{validate\+Word}} (const std\+::vector$<$ std\+::string $>$ \&words\+Array, const std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_aa17dabc9ac72885bd36217113888a9c5}{found\+Words}} (std\+::vector$<$ std\+::string $>$ \&word\+Found\+Array, const std\+::vector$<$ char $>$ \&check\+Word, std\+::vector$<$ std\+::string $>$ \&words\+Array)
+\item 
+std\+::string \mbox{\hyperlink{word_search_8h_ae95bc37adade531bf52821f6aa9dc751}{concat\+Chars}} (const std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_a4ccf066781bc753339854f8177a9ea64}{print\+Word}} (const std\+::vector$<$ char $>$ \&check\+Word)
+\item 
+void \mbox{\hyperlink{word_search_8h_aa91c00ac1a20ae4489c38f8a9a01ef19}{display\+Found\+Words}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{word_search_8cpp_aa17dabc9ac72885bd36217113888a9c5}{found\+Words}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\+\_\+\+SIZE}} = 15
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains function declarations for Word Search game. 
+
+Provides a function prototype for all the game logics including loading files, getting inputs, transfusing 2D arrays, and validating words.
+
+\begin{DoxyAuthor}{Author}
+Nishan Subba @github \href{https://github.com/nisSubba2024}{\texttt{ https\+://github.\+com/nis\+Subba2024}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/08/2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{word_search_8h_ac23eaed35f1d529f1390f279a1c64f5a}\index{wordSearch.h@{wordSearch.h}!askCoordinates@{askCoordinates}}
+\index{askCoordinates@{askCoordinates}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{askCoordinates()}{askCoordinates()}}
+{\footnotesize\ttfamily \label{word_search_8h_ac23eaed35f1d529f1390f279a1c64f5a} 
+void ask\+Coordinates (\begin{DoxyParamCaption}\item[{int \&}]{row\+Start}{, }\item[{int \&}]{col\+Start}{, }\item[{int \&}]{row\+End}{, }\item[{int \&}]{col\+End}{}\end{DoxyParamCaption})}
+
+Ask the user for coordinates of starting and ending positions Since C-\/\+Style array do not have bound check, we have to make sure user does not enter out of bound coordinates Using loop, continue to as ask user to enter valid coordinate 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_ac108a8616b5d57535df1033787c1c1f8}\index{wordSearch.h@{wordSearch.h}!clearWordArray@{clearWordArray}}
+\index{clearWordArray@{clearWordArray}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{clearWordArray()}{clearWordArray()}}
+{\footnotesize\ttfamily \label{word_search_8h_ac108a8616b5d57535df1033787c1c1f8} 
+void clear\+Word\+Array (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Clear the vector which contains characters from user inputted coordinates. We want to make sure that everytime a user picks a pair of coordinates, old vector is clear so a new set of characters can be inserted into it. 
+\begin{DoxyParams}{Parameters}
+{\em check\+Word} & Vector that holds char of characters from user picked coordinates \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_ae95bc37adade531bf52821f6aa9dc751}\index{wordSearch.h@{wordSearch.h}!concatChars@{concatChars}}
+\index{concatChars@{concatChars}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{concatChars()}{concatChars()}}
+{\footnotesize\ttfamily \label{word_search_8h_ae95bc37adade531bf52821f6aa9dc751} 
+std\+::string concat\+Chars (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Concatenate the set of characters from 2D Grid into a single string 
+\begin{DoxyParams}{Parameters}
+{\em check\+Word} & A set of characters from starting and ending coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Concatenated string of characters 
+\end{DoxyReturn}
+\Hypertarget{word_search_8h_aaa4754b1d78d7f06bb286df76471fae7}\index{wordSearch.h@{wordSearch.h}!diagonalSearchDownForward@{diagonalSearchDownForward}}
+\index{diagonalSearchDownForward@{diagonalSearchDownForward}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{diagonalSearchDownForward()}{diagonalSearchDownForward()}}
+{\footnotesize\ttfamily \label{word_search_8h_aaa4754b1d78d7f06bb286df76471fae7} 
+void diagonal\+Search\+Down\+Forward (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Diagonally moving from TOP TO BOTTOM in negative direction, or decreasing slope 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a49cbd5e886d8fed5aeb88524ba64d477}\index{wordSearch.h@{wordSearch.h}!diagonalSearchDownReverse@{diagonalSearchDownReverse}}
+\index{diagonalSearchDownReverse@{diagonalSearchDownReverse}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{diagonalSearchDownReverse()}{diagonalSearchDownReverse()}}
+{\footnotesize\ttfamily \label{word_search_8h_a49cbd5e886d8fed5aeb88524ba64d477} 
+void diagonal\+Search\+Down\+Reverse (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Diagonally moving from BOTTOM TO TOP in negative direction, or decreasing slope 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a66366660da302866051393f71a0b3bb3}\index{wordSearch.h@{wordSearch.h}!diagonalSearchUpForward@{diagonalSearchUpForward}}
+\index{diagonalSearchUpForward@{diagonalSearchUpForward}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{diagonalSearchUpForward()}{diagonalSearchUpForward()}}
+{\footnotesize\ttfamily \label{word_search_8h_a66366660da302866051393f71a0b3bb3} 
+void diagonal\+Search\+Up\+Forward (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Diagonally moving from BOTTOM TO TOP in positive direction, or increasing slope 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a670a34b7502f713ffb45e1b2795a2db8}\index{wordSearch.h@{wordSearch.h}!diagonalSearchUpReverse@{diagonalSearchUpReverse}}
+\index{diagonalSearchUpReverse@{diagonalSearchUpReverse}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{diagonalSearchUpReverse()}{diagonalSearchUpReverse()}}
+{\footnotesize\ttfamily \label{word_search_8h_a670a34b7502f713ffb45e1b2795a2db8} 
+void diagonal\+Search\+Up\+Reverse (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Diagonally moving from TOP TO BOTTOM in positive direction, or increasing slope 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_aa91c00ac1a20ae4489c38f8a9a01ef19}\index{wordSearch.h@{wordSearch.h}!displayFoundWords@{displayFoundWords}}
+\index{displayFoundWords@{displayFoundWords}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{displayFoundWords()}{displayFoundWords()}}
+{\footnotesize\ttfamily \label{word_search_8h_aa91c00ac1a20ae4489c38f8a9a01ef19} 
+void display\+Found\+Words (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{found\+Words}{}\end{DoxyParamCaption})}
+
+Display words user found 
+\begin{DoxyParams}{Parameters}
+{\em found\+Words} & Vector to hold words user found \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a816a0a663710b33482a8750802a038f2}\index{wordSearch.h@{wordSearch.h}!displayGrid@{displayGrid}}
+\index{displayGrid@{displayGrid}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{displayGrid()}{displayGrid()}}
+{\footnotesize\ttfamily \label{word_search_8h_a816a0a663710b33482a8750802a038f2} 
+void display\+Grid (\begin{DoxyParamCaption}\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}}\end{DoxyParamCaption})}
+
+Display the 2D array of char 
+\begin{DoxyParams}{Parameters}
+{\em grid} & 2D array grid \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a15ec5f7cd7bfe85c3eb85482e2f7981d}\index{wordSearch.h@{wordSearch.h}!displayWordBank@{displayWordBank}}
+\index{displayWordBank@{displayWordBank}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{displayWordBank()}{displayWordBank()}}
+{\footnotesize\ttfamily \label{word_search_8h_a15ec5f7cd7bfe85c3eb85482e2f7981d} 
+void display\+Word\+Bank (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{words\+Array}{}\end{DoxyParamCaption})}
+
+Display the words user are supposed to find Count how many words are currently in the word bank 
+\begin{DoxyParams}{Parameters}
+{\em words\+Array} & List of words to find \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_aa17dabc9ac72885bd36217113888a9c5}\index{wordSearch.h@{wordSearch.h}!foundWords@{foundWords}}
+\index{foundWords@{foundWords}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{foundWords()}{foundWords()}}
+{\footnotesize\ttfamily \label{word_search_8h_aa17dabc9ac72885bd36217113888a9c5} 
+void found\+Words (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{word\+Found\+Array}{, }\item[{const std\+::vector$<$ char $>$ \&}]{check\+Word}{, }\item[{std\+::vector$<$ std\+::string $>$ \&}]{words\+Array}{}\end{DoxyParamCaption})}
+
+If a word is found, add it to the found array vector to keep track of which words are found 
+\begin{DoxyParams}{Parameters}
+{\em word\+Found\+Array} & Vector to hold all the words user have already found \\
+\hline
+{\em check\+Word} & A set of characters from starting and ending coordinates \\
+\hline
+{\em words\+Array} & Words user are looking for in the Grid \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_ae75f2a99638259af41fc293652edb5f8}\index{wordSearch.h@{wordSearch.h}!horizontalSearchForward@{horizontalSearchForward}}
+\index{horizontalSearchForward@{horizontalSearchForward}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{horizontalSearchForward()}{horizontalSearchForward()}}
+{\footnotesize\ttfamily \label{word_search_8h_ae75f2a99638259af41fc293652edb5f8} 
+void horizontal\+Search\+Forward (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Horizontally moving from LEFT TO RIGHT 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a36cda9066cb401351daecb899927133e}\index{wordSearch.h@{wordSearch.h}!horizontalSearchReverse@{horizontalSearchReverse}}
+\index{horizontalSearchReverse@{horizontalSearchReverse}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{horizontalSearchReverse()}{horizontalSearchReverse()}}
+{\footnotesize\ttfamily \label{word_search_8h_a36cda9066cb401351daecb899927133e} 
+void horizontal\+Search\+Reverse (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Horizontally moving in reverse from RIGHT TO LEFT 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a1eea2752d20e6258d1cae9e4bf7da9f0}\index{wordSearch.h@{wordSearch.h}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily \label{word_search_8h_a1eea2752d20e6258d1cae9e4bf7da9f0} 
+void load\+File (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file\+Obj}{, }\item[{std\+::string \&}]{file}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ std\+::string $>$ \&}]{words\+Array}{}\end{DoxyParamCaption})}
+
+Load the file into the 2D Array and vector of word list Loop until the max size of the grid and insert set of characters. Once loop reaches MAX grid size, reach each line for words which user is supposed to search for in the grid Insert the words line by line into vector 
+\begin{DoxyParams}{Parameters}
+{\em file\+Obj} & File object \\
+\hline
+{\em file} & Name of the file \\
+\hline
+{\em grid} & 2D grid to hold array \\
+\hline
+{\em words\+Array} & Vector to contain the list of words \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a4ccf066781bc753339854f8177a9ea64}\index{wordSearch.h@{wordSearch.h}!printWord@{printWord}}
+\index{printWord@{printWord}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{printWord()}{printWord()}}
+{\footnotesize\ttfamily \label{word_search_8h_a4ccf066781bc753339854f8177a9ea64} 
+void print\+Word (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Display characters in the check\+Word vector 
+\begin{DoxyParams}{Parameters}
+{\em check\+Word} & A set of characters from starting and ending coordinates \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_aaf57a1980a1dca4154e323610c7330a0}\index{wordSearch.h@{wordSearch.h}!validateWord@{validateWord}}
+\index{validateWord@{validateWord}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{validateWord()}{validateWord()}}
+{\footnotesize\ttfamily \label{word_search_8h_aaf57a1980a1dca4154e323610c7330a0} 
+bool validate\+Word (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{words\+Array}{, }\item[{const std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Take a characters from user entered X,Y coordinates and match it against words in the words\+Array. 
+\begin{DoxyParams}{Parameters}
+{\em words\+Array} & Words user are looking for in the Grid \\
+\hline
+{\em check\+Word} & A set of characters from starting and ending coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return True if check\+Word is found in words\+Array or False if it\textquotesingle{}s not there 
+\end{DoxyReturn}
+\Hypertarget{word_search_8h_a7e699ea54493bbf3d922b56582b1f215}\index{wordSearch.h@{wordSearch.h}!verticalSearchForward@{verticalSearchForward}}
+\index{verticalSearchForward@{verticalSearchForward}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{verticalSearchForward()}{verticalSearchForward()}}
+{\footnotesize\ttfamily \label{word_search_8h_a7e699ea54493bbf3d922b56582b1f215} 
+void vertical\+Search\+Forward (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Vertically moving from TOP TO BOTTOM 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+\Hypertarget{word_search_8h_a4e3dbb8b49ab5a383c9f68a65725a315}\index{wordSearch.h@{wordSearch.h}!verticalSearchReverse@{verticalSearchReverse}}
+\index{verticalSearchReverse@{verticalSearchReverse}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{verticalSearchReverse()}{verticalSearchReverse()}}
+{\footnotesize\ttfamily \label{word_search_8h_a4e3dbb8b49ab5a383c9f68a65725a315} 
+void vertical\+Search\+Reverse (\begin{DoxyParamCaption}\item[{int}]{row\+Start}{, }\item[{int}]{col\+Start}{, }\item[{int}]{row\+End}{, }\item[{int}]{col\+End}{, }\item[{char}]{grid}{\mbox{[}$\,$\mbox{]}\mbox{[}\+GRID\+\_\+\+SIZE\mbox{]}, }\item[{std\+::vector$<$ char $>$ \&}]{check\+Word}{}\end{DoxyParamCaption})}
+
+Transverse 2D Grid Array Vertically moving in reverse from BOTTOM TO TOP 
+\begin{DoxyParams}{Parameters}
+{\em row\+Start} & X coordinate of the starting position,which is a Row Number \\
+\hline
+{\em col\+Start} & Y coordinate of the starting position,which is a Column Number \\
+\hline
+{\em row\+End} & X coordinate of the ending position,which is a Row Number \\
+\hline
+{\em col\+End} & Y coordinate of the ending position,which is a Column Number \\
+\hline
+{\em grid} & 2D Grid user are traversing \\
+\hline
+{\em check\+Word} & A list of characters from starting (X, Y) and ending (X, Y) coordinate, which is also a word user think is from the word bank \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{word_search_8h_a412aaef61a623a4acb699ef4099b2491}\index{wordSearch.h@{wordSearch.h}!GRID\_SIZE@{GRID\_SIZE}}
+\index{GRID\_SIZE@{GRID\_SIZE}!wordSearch.h@{wordSearch.h}}
+\doxysubsubsection{\texorpdfstring{GRID\_SIZE}{GRID\_SIZE}}
+{\footnotesize\ttfamily \label{word_search_8h_a412aaef61a623a4acb699ef4099b2491} 
+const int GRID\+\_\+\+SIZE = 15}
+
+The MAX size of the 2D Array to display grid. 

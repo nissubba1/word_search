@@ -1,0 +1,88 @@
+\doxysection{word\+Search.\+h}
+\hypertarget{word_search_8h_source}{}\label{word_search_8h_source}\mbox{\hyperlink{word_search_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ ****************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ File\ Name:\ \ \ \ \ \ wordSearch.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ \ Author:\ \ \ \ \ \ \ \ \ Nishan\ Subba}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ GitHub:\ \ \ \ \ \ \ \ \ @nisSubba2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ Date\ Created:\ \ \ 01/08/2025}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ Description:\ \ \ \ Header\ file\ for\ Word\ Search\ function\ declaration}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ ****************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ WORDSEARCH\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ WORDSEARCH\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ Header\ preprocess}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}\ =\ 15;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a1eea2752d20e6258d1cae9e4bf7da9f0}{loadFile}}(std::ifstream\&\ fileObj,\ std::string\&\ file,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],\ std::vector<std::string>\&\ wordsArray);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a816a0a663710b33482a8750802a038f2}{displayGrid}}(\textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}]);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a15ec5f7cd7bfe85c3eb85482e2f7981d}{displayWordBank}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ wordsArray);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Transversing\ Grid}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Horizontal\ Search\ -\/\ Forward\ -\/>}}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_ae75f2a99638259af41fc293652edb5f8}{horizontalSearchForward}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ Horizontal\ Search\ -\/\ Reverse\ <-\/}}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a36cda9066cb401351daecb899927133e}{horizontalSearchReverse}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ Vertical\ Search\ -\/\ Forward\ -\/>}}
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a7e699ea54493bbf3d922b56582b1f215}{verticalSearchForward}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ Vertical\ Search\ -\/\ Reverse\ <-\/}}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a4e3dbb8b49ab5a383c9f68a65725a315}{verticalSearchReverse}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ Diagonal\ Search\ -\/\ Going\ Down\ -\/\ Forward\ \(\backslash\)>}}
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_aaa4754b1d78d7f06bb286df76471fae7}{diagonalSearchDownForward}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ Diagonal\ Search\ -\/\ Going\ Down\ -\/\ Reverse}}
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a49cbd5e886d8fed5aeb88524ba64d477}{diagonalSearchDownReverse}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ Diagonal\ Search\ -\/\ Going\ Up\ -\/\ Forward\ />}}
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a66366660da302866051393f71a0b3bb3}{diagonalSearchUpForward}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{comment}{//\ Diagonal\ Search\ -\/\ Going\ Up\ -\/\ Reverse\ </}}
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a670a34b7502f713ffb45e1b2795a2db8}{diagonalSearchUpReverse}}(\textcolor{keywordtype}{int}\ rowStart,\ \textcolor{keywordtype}{int}\ colStart,\ \textcolor{keywordtype}{int}\ rowEnd,\ \textcolor{keywordtype}{int}\ colEnd,\ \textcolor{keywordtype}{char}\ grid[][\mbox{\hyperlink{word_search_8h_a412aaef61a623a4acb699ef4099b2491}{GRID\_SIZE}}],}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{comment}{//\ User\ input}}
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_ac23eaed35f1d529f1390f279a1c64f5a}{askCoordinates}}(\textcolor{keywordtype}{int}\&\ rowStart,\ \textcolor{keywordtype}{int}\&\ colStart,\ \textcolor{keywordtype}{int}\&\ rowEnd,\ \textcolor{keywordtype}{int}\&\ colEnd);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{comment}{//\ clear\ the\ vector}}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_ac108a8616b5d57535df1033787c1c1f8}{clearWordArray}}(std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ validate\ the\ word}}
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{word_search_8h_aaf57a1980a1dca4154e323610c7330a0}{validateWord}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ wordsArray,\ \textcolor{keyword}{const}\ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{comment}{//\ take\ the\ found\ word\ and\ add\ to\ found\ word\ array}}
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_aa17dabc9ac72885bd36217113888a9c5}{foundWords}}(std::vector<std::string>\&\ wordFoundArray,\ \textcolor{keyword}{const}\ std::vector<char>\&\ checkWord,}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\&\ wordsArray);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{comment}{//\ take\ a\ char\ of\ letters\ and\ return\ a\ concat\ word}}
+\DoxyCodeLine{00210\ std::string\ \mbox{\hyperlink{word_search_8h_ae95bc37adade531bf52821f6aa9dc751}{concatChars}}(\textcolor{keyword}{const}\ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{comment}{//\ display\ coordinate\ word}}
+\DoxyCodeLine{00217\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_a4ccf066781bc753339854f8177a9ea64}{printWord}}(\textcolor{keyword}{const}\ std::vector<char>\&\ checkWord);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{comment}{//\ display\ words\ found}}
+\DoxyCodeLine{00224\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word_search_8h_aa91c00ac1a20ae4489c38f8a9a01ef19}{displayFoundWords}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{word_search_8cpp_aa17dabc9ac72885bd36217113888a9c5}{foundWords}});}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WORDSEARCH\_H}}
+
+\end{DoxyCode}
